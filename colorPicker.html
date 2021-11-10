@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet css file -->
+    <link rel="stylesheet" href="colorPicker.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+    <title>Color Picker</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Color Picker</h1>
+        <div class="colors">
+            <p class="redC">R</p>
+            <input type="range" min="0" max="255" class="red"><br>
+            <p class="max-num">255</p>
+            <p class="greenC">G</p>
+            <input type="range" min="0" max="255" class="green"><br>
+            <p class="max-num">255</p>
+            <p class="blueC">B</p>
+            <input type="range" min="0" max="255" class="blue">
+            <p class="max-num">255</p>
+            <input type="button" value="Generate color 1!" id="btn">
+            <input type="button" value="Generate color 2!" id="btn">
+        </div>
+        <div class="colorBox"></div>
+        <div class="colorBox"></div>
+        <div class="favorit">
+            <input type="text" id="nick-name" placeholder="Write your nickName...">
+            <input type="button" value="Add to my favorites" id="save">
+        </div>
+    </div>
+    <script src="colorPicker.js"></script>
+</body>
+
+</html>

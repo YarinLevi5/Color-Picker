@@ -1,0 +1,100 @@
+ body {
+     font-family: 'Zen Maru Gothic',
+         sans-serif;
+     font-weight: bold;
+     font-size: 18px;
+ }
+
+ .wrapper {
+     height: 600px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .wrapper h1 {
+     font-size: 30px;
+     border-bottom: 2px solid #000;
+     position: absolute;
+     top: 90px;
+     text-align: center;
+ }
+
+ .wrapper .colorBox {
+     width: 130px;
+     height: 150px;
+     border: 1px solid black;
+
+     /* margin: 5px; */
+     float: left;
+ }
+
+ .wrapper .colors {
+     /* border: 2px solid red; */
+     width: 250px;
+     height: 150px;
+     float: left;
+     position: relative;
+     margin: 20px;
+ }
+
+ .wrapper #btn,
+ #save {
+     border: 2px solid black;
+     margin-left: 25px;
+     margin-top: 15px;
+     padding: 3px;
+     font-family: 'Zen Maru Gothic',
+         sans-serif;
+     font-weight: bolder;
+     font-size: 15px;
+     box-shadow: 10px 15px 25px gray;
+ }
+
+ .colors .redC {
+     color: red;
+ }
+
+ .colors .greenC {
+     color: green;
+ }
+
+ .colors .blueC {
+     color: blue;
+ }
+
+ .redC,
+ .greenC,
+ .blueC {
+     position: absolute;
+     left: -20px;
+     margin-top: -5px;
+ }
+
+ .max-num {
+     position: absolute;
+     left: 170px;
+     margin-top: -34px;
+ }
+
+ .favorit {
+     width: 100px;
+     height: 150px;
+     margin: 50px;
+ }
+
+ #nick-name {
+     font-size: 15px;
+     width: 170px;
+     padding: 5px;
+     font-weight: bold;
+     font-family: 'Zen Maru Gothic',
+         sans-serif;
+ }
+
+ #save {
+     color: white;
+     margin-top: 10px;
+     margin-left: 0px;
+     background-image: linear-gradient(red, green, blue);
+ }
