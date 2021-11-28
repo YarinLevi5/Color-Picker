@@ -18,13 +18,13 @@ console.log(btn);
 //     box1.style.backgroundColor = `rgb(${redV.value},${greenV.value} ,${blueV.value})`;
 // }); 
 
-btn.forEach((btnn,indx)=>{
+btn.forEach((btnn, indx) => {
     //console.log(x);
-    btnn.addEventListener('click',()=>{
-    // console.log(redV.value); 
-    boxes[indx].style.backgroundColor = `rgb(${redV.value},${greenV.value},${blueV.value})`;
-    boxes[indx].innerHTML = `rgb(${redV.value},${greenV.value},${blueV.value})`;
-});
+    btnn.addEventListener('click', () => {
+        // console.log(redV.value); 
+        boxes[indx].style.backgroundColor = `rgb(${redV.value},${greenV.value},${blueV.value})`;
+        boxes[indx].innerHTML = `rgb(${redV.value},${greenV.value},${blueV.value})`;
+    });
 });
 
 let arrayOfColors = [];
@@ -32,16 +32,21 @@ let arrayOfColors = [];
 let btnSave = document.querySelector('#save');
 let nickName = document.querySelector('#nick-name');
 
-btnSave.addEventListener('click',()=>{
-   
-// function saveColor(_r,_g,_b){
-//     r=this._r;
-//     g=this._g;
-//     b=this._b;
-// }
-// let obj = new saveColor(redV.value,greenV.value,blueV.value);
-let obj = {};
-obj[nickName.value]=`rgb(${redV.value},${greenV.value},${blueV.value})`;
-arrayOfColors.push(obj);
-console.log(arrayOfColors);
+btnSave.addEventListener('click', () => {
+    // function saveColor(_r,_g,_b){
+    //     r=this._r;
+    //     g=this._g;
+    //     b=this._b;
+    // }
+    // let obj = new saveColor(redV.value,greenV.value,blueV.value);
+    let obj = {};
+    obj[nickName.value] = `rgb(${redV.value},${greenV.value},${blueV.value})`;
+    arrayOfColors.push(obj);
+    // console.log(arrayOfColors);
+    saveToLocalStorage();
 });
+
+saveToLocalStorage = () => {
+    let nickNamesData = JSON.stringify(arrayOfColors);
+    localStorage.setItem("nickName", nickNamesData);
+}
